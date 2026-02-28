@@ -62,6 +62,9 @@ export default function Board() {
         items={columns.map(c => c.id)}          
         strategy={horizontalListSortingStrategy}
       >
+         <div className={styles.header}>
+          <h1>Trello Board</h1>
+         </div>
         <div className={styles.board}>
           {columns.map(column => (
             <Column key={column.id} column={column} />
