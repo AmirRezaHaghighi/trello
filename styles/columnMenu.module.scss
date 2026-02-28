@@ -1,0 +1,57 @@
+@use "@/styles/_variables" as *;
+
+.menuWrapper {
+  position: relative;
+}
+
+.iconBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: $border-radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-text-secondary;
+  transition: all $transition-fast;
+
+  &:hover {
+    background: $color-hover-bg;
+    color: $color-text-primary;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 110%;
+  background:  $color-white;
+  border-radius: 10px;
+  box-shadow: $shadow-dropdown;
+  padding: 6px 0;
+  min-width: 180px;
+  z-index: $z-dropdown;
+  animation: fadeIn $transition-fast;
+}
+
+.menuItem {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background $transition-fast;
+
+  &:hover {
+    background: #f4f5f7;
+  }
+}
+
+.edit    { color: $color-primary; }
+.danger  { color: $color-danger;  }

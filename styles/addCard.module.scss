@@ -1,0 +1,40 @@
+@use "@/styles/_variables" as *;
+
+.wrapper {
+  margin: $spacing-sm;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-top: $spacing-sm;
+}
+
+.createBtn {
+  background-color: $color-success;
+  color: $color-white;
+  border: none;
+  border-radius: $border-radius-md;
+  padding: $spacing-sm $spacing-md;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+  transition: background-color $transition-normal;
+
+  &:hover {
+    background-color: $color-success-hover;
+  }
+}
+
+.cancelBtn {
+  background: transparent;
+  border: none;
+  font-size: $font-size-icon;
+  cursor: pointer;
+  color: $color-text-secondary;
+  padding: $spacing-xs;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+}

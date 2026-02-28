@@ -1,0 +1,43 @@
+@use "@/styles/_variables" as *;
+
+.card {
+  background: $color-white;
+  padding: $spacing-sm;
+  border-radius: $border-radius-lg;
+  margin-bottom: $spacing-sm;
+  box-shadow: $shadow-sm;
+  cursor: grab;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.title {
+  margin-bottom: $spacing-sm;
+  color: #40424b;
+  font-weight: $font-weight-medium;
+}
+
+.dragHandle {
+  cursor: grab;
+  font-size: 18px;
+  user-select: none;
+}
+
+.btnComment {
+  color: $color-text-primary;
+  background-color: $color-bg-column;
+  font-size: $font-size-sm;
+  border: none;
+  border-radius: $border-radius-sm;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+}

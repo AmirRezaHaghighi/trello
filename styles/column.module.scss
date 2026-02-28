@@ -1,0 +1,54 @@
+@use "@/styles/_variables" as *;
+
+.column {
+  background: $color-bg-column;
+  flex: 0 0 auto;
+  width: 16rem;
+  border-radius: $border-radius-sm;
+  margin: 0 $spacing-sm;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: $spacing-sm $spacing-md 0 $spacing-sm;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.dragHandle {
+  cursor: grab;
+  font-size: 22px;
+  user-select: none;
+}
+
+.titleInput {
+  height: 22px;
+}
+
+.cardsWrapper {
+  padding: $spacing-sm;
+}
+
+.fullBtn {
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  color: $color-text-secondary;
+  padding: $spacing-sm $spacing-md;
+  font-size: $font-size-base;
+  min-height: 2rem;
+  border: none;
+
+  &:hover {
+    background-color: $color-hover-bg-dark;
+    color: $color-text-primary;
+  }
+}

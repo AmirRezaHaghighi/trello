@@ -1,0 +1,69 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+h2{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+h4{
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+body{
+  margin: 0px;
+  padding: 1rem;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: rgb(64, 66, 75);
+  background: #2f6f95;
+}
+
+.textarea {
+  width: 100%;
+  resize: none;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #ffffff;
+  box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+  font-size: 0.9rem;
+  outline: none;
+  min-height: 4rem;
+  padding: 0.5rem ;
+  box-sizing: border-box;
+  
+  &:focus {
+    box-shadow: 0 0 0 2px #4c9aff;
+  }
+}
+
+.iconBtn {
+  border:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:transparent;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+

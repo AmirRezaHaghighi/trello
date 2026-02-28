@@ -1,0 +1,59 @@
+// styles/_variables.scss
+// (or styles/variables.module.scss if preferred)
+
+// ── Colors ──────────────────────────────────────────────────────────────
+// Core Trello/Atlassian-inspired palette
+$color-primary:       #0079bf;        // main blue (focus, links)
+$color-success:       #5aac44;        // green for add/create buttons
+$color-success-hover: #519839;
+$color-danger:        #d32f2f;        // red for delete/danger actions
+$color-warning:       #ff9f1a;        // orange accents
+$color-text-primary:  #172b4d;        // main dark text
+$color-text-secondary:#6b778c;        // muted/gray text
+$color-text-muted:    #5e6c84;        // even lighter meta text
+$color-bg-column:     #dfe1e6;        // light gray column background
+$color-bg-light:      #f4f5f7;        // form/comment backgrounds
+$color-bg-overlay:    rgba(0,0,0,0.5);
+$color-border-light:  rgba(9, 30, 66, 0.25);
+$color-hover-bg:      #f0f1f3;
+$color-hover-bg-dark: #091e4221;
+$color-white:White;
+
+// ── Typography ──────────────────────────────────────────────────────────
+$font-size-base:      0.875rem;       // 14px – default body
+$font-size-sm:        0.75rem;        // 12px – small/meta
+$font-size-md:        0.875rem;
+$font-size-lg:        1rem;
+$font-size-xl:        1.125rem;
+$font-size-icon:      1.2rem;         // cancel icons, etc.
+$font-weight-normal:  400;
+$font-weight-medium:  500;
+$font-weight-bold:    600;
+
+// ── Spacing Scale (8pt grid common in modern UI) ────────────────────────
+$spacing-xxs: 0.125rem;  // 2px
+$spacing-xs:  0.25rem;   // 4px
+$spacing-sm:  0.5rem;    // 8px
+$spacing-md:  0.75rem;   // 12px
+$spacing-lg:  1rem;      // 16px
+$spacing-xl:  1.5rem;
+
+// ── Borders & Radius ────────────────────────────────────────────────────
+$border-radius-sm: 3px;
+$border-radius-md: 4px;
+$border-radius-lg: 6px;
+$border-radius-pill: 9999px;
+
+// ── Shadows ─────────────────────────────────────────────────────────────
+$shadow-sm: 0 1px 0 $color-border-light;
+$shadow-md: 0 2px 4px rgba(0,0,0,0.1);
+$shadow-dropdown: 0 10px 28px rgba(0,0,0,0.12);
+
+// ── Transitions ─────────────────────────────────────────────────────────
+$transition-fast:  0.15s ease;
+$transition-normal: 0.2s ease;
+
+// ── Z-Index ─────────────────────────────────────────────────────────────
+$z-dropdown:  100;
+$z-modal:     1000;
+$z-overlay:   999;

@@ -1,0 +1,67 @@
+@use "@/styles/_variables" as *;
+
+.wrapper {
+  background: $color-bg-column;
+  border-radius: $border-radius-md;
+  padding: $spacing-sm;
+  width: 16rem;
+}
+
+.addTrigger {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: $border-radius-md;
+  padding: $spacing-md;
+  width: 16rem;
+  text-align: left;
+  cursor: pointer;
+  color:  $color-white;
+  font-weight: $font-weight-medium;
+  transition: background $transition-normal;
+
+  &:hover {
+    background: $color-hover-bg-dark;
+  }
+}
+
+.input {
+  width: 100%;
+  border-radius: $border-radius-sm;
+  border: none;
+  margin-bottom: $spacing-sm;
+  box-shadow: $shadow-sm;
+  padding: $spacing-sm $spacing-md;
+  box-sizing: border-box;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.addBtn {
+  background-color: $color-success;
+  color: $color-white;
+  border: none;
+  border-radius: $border-radius-md;
+  padding: $spacing-sm $spacing-md;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-success-hover;
+  }
+}
+
+.cancelBtn {
+  background: transparent;
+  border: none;
+  font-size: $font-size-icon;
+  cursor: pointer;
+  color: $color-text-secondary;
+
+  &:hover {
+    color: $color-text-primary;
+  }
+}
