@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trello Clone
 
-## Getting Started
+A modern **Trello-inspired** kanban board built with **Next.js 16**, **React 19**, **TypeScript**, **Zustand**, and **@dnd-kit** for drag-and-drop.
 
-First, run the development server:
+## Features
+
+- Create, rename and delete columns (lists)
+- Add, move (drag & drop), and delete cards
+- Drag & drop cards **between columns** and reorder within the same column
+- Reorder columns horizontally
+- LocalStorage persistence (board state saved in browser)
+- Responsive design (mobile-friendly layout)
+- Clean TypeScript types & Zustand store
+- Modern UI with SCSS modules
+
+## Tech Stack
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **State Management**: Zustand
+- **Drag & Drop**: @dnd-kit (core + sortable + utilities)
+- **Styling**: SCSS modules
+- **Icons**: react-icons
+- **UUID**: uuid
+- **Linting/Formatting**: ESLint + Next.js config
+
+## Prerequisites
+
+- Node.js ≥ 20
+- pnpm / yarn / npm (project uses npm by default)
+
+## Installation
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/AmirRezaHaghighi/trello.git
+cd trello-clone
+
+# 2. Install dependencies
+npm install
+# or
+yarn install
+# or
+pnpm install
+
+```
+## Development
+
+```bash
+# Start development server
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
+
+# Open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+trello-clone/
+├── app/
+│   ├── components/
+│   │   ├── Board.tsx
+│   │   ├── Column.tsx
+│   │   ├── Card.tsx
+│   │   ├── AddCard.tsx
+│   │   ├── AddColumn.tsx
+│   │   └── ... (other UI components)
+│   ├── layout.tsx
+│   ├── page.tsx               ← main page that renders <Board />
+│   └── globals.css            (if using global styles)
+├── store/
+│   └── useBoardStore.ts       ← Zustand store with board state & actions
+├── types/
+│   └── board.ts               ← TypeScript interfaces (ColumnType, CardType, etc.)
+├── lib/                       (optional)
+│   └── storage.ts             ← localStorage helpers (load/save board)
+├── styles/
+│   ├── board.module.scss
+│   ├── column.module.scss
+│   ├── card.module.scss
+│   ├── addCard.module.scss
+│   ├── addColumn.module.scss
+│   └── globals.scss
+├── public/                    ← static assets (images, favicon, etc.)
+├── .eslintrc.json             (or eslint.config.js)
+├── next.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
+## Local Storage
+The board state is automatically saved to localStorage under the key "board".
+To reset the board:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+JavaScriptlocalStorage.removeItem("board");
+```
